@@ -1,0 +1,8 @@
+2018-12-24 03:00:26.281 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-12-24 03:00:27.984 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 7.2.1
+2018-12-24 03:00:27.984 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-12-24 03:00:27.984 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: F:\solr-7.2.1
+2018-12-24 03:00:28.046 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-12-24T03:00:27.984Z
+2018-12-24 03:00:28.046 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+º”‘ÿ¿©’π¥ µ‰£∫ext.dic
+º”‘ÿ¿©’πÕ£÷π¥ µ‰£∫stopword.dic

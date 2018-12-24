@@ -1,0 +1,19 @@
+solr.cmd start
+http://127.0.0.1:8983/solr/#/
+solr.cmd create -c how2java
+solr.cmd delete -c new_core
+下载 IKAnalyzer6.5.0.jar
+D:\software\solr-7.2.1\server\solr-webapp\webapp\WEB-INF\lib
+增加新的字段类型
+D:\software\solr-7.2.1\server\solr\how2java\conf\managed-schema
+修改配置文件 managed-schema：
+<fieldType name="text_ik" class="solr.TextField">  <br data-filtered="filtered">        <analyzer class="org.wltea.analyzer.lucene.IKAnalyzer"/>  <br data-filtered="filtered"></fieldType>  <br data-filtered="filtered"><field name="text_ik"  type="text_ik" indexed="true"  stored="true"  multiValued="false" />
+
+<schema name="default-config" version="1.6">
+    <fieldType name="text_ik" class="solr.TextField"> 
+            <analyzer class="org.wltea.analyzer.lucene.IKAnalyzer"/> 
+    </fieldType> 
+    <field name="text_ik"  type="text_ik" indexed="true"  stored="true"  multiValued="false" />
+左边选中 how2java -> Schema -> Add Field 输入name: name， field type: text_ik, 这里一定要使用中文分词 中新创建的 text_ik类型，否则后续查询中文会失败。
+http://127.0.0.1:8983/solr/#/how2java
+左边点击 Query -> 点击 Execute Query 查询之后，可以看到右侧显示查询结果，总数是 147939 条
